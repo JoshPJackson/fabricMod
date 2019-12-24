@@ -2,6 +2,7 @@ package net.fabricmc.examplemod.fluids;
 
 import net.fabricmc.examplemod.ExampleMod;
 import net.fabricmc.examplemod.base.BasicFluid;
+import net.fabricmc.examplemod.register.FluidRegistry;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.block.BlockState;
 import net.minecraft.fluid.FluidState;
@@ -26,13 +27,13 @@ public abstract class Acid extends BasicFluid {
 	@Override
 	public Fluid getFlowing()
 	{
-		return ExampleMod.flowingAcid;
+		return FluidRegistry.FLOWING_ACID;
 	}
 	
 	@Override
 	public Fluid getStill()
 	{
-		return ExampleMod.stillAcid;
+		return FluidRegistry.STILL_ACID;
 	}
 	
 	
@@ -40,7 +41,7 @@ public abstract class Acid extends BasicFluid {
 	@Override
 	public boolean matchesType(Fluid fluid_1)
 	{
-		return fluid_1 == ExampleMod.flowingAcid || fluid_1 == ExampleMod.stillAcid;
+		return fluid_1 == FluidRegistry.FLOWING_ACID || fluid_1 == FluidRegistry.STILL_ACID;
 	}
 	
 	// still acid

@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.fabricmc.examplemod.ExampleMod"
+    ],
+    "client": [
+    	"net.fabricmc.examplemod.ExampleModClientInitializer"
     ]
   },
   "depends": {
