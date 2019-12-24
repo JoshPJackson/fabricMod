@@ -37,11 +37,11 @@ public class ExampleMod implements ModInitializer {
 		Registry.register(Registry.BLOCK, new Identifier("examplemod", "example_block"), EXAMPLE_BLOCK);
 		Registry.register(Registry.ITEM, new Identifier("examplemod", "example_block"), new BlockItem(EXAMPLE_BLOCK, new Item.Settings().group(ItemGroup.MISC)));
 		
-        //BucketItem acidBucket = new BucketItem(FluidRegistry.STILL_ACID, new Item.Settings().maxCount(1).group(ItemGroup.MISC));
-        //Registry.register(Registry.ITEM, new Identifier("examplemod:acid_bucket"), acidBucket);
+        BucketItem acidBucket = new BucketItem(FluidRegistry.STILL_ACID, new Item.Settings().maxCount(1).group(ItemGroup.MISC));
+        Registry.register(Registry.ITEM, new Identifier("examplemod:acid_bucket"), acidBucket);
         
-        //acid = new BaseFluidBlock(FluidRegistry.STILL_ACID);
-        //Registry.register(Registry.BLOCK, new Identifier("examplemod:acid_block"), acid);
+        acid = new BaseFluidBlock(FluidRegistry.STILL_ACID);
+        Registry.register(Registry.BLOCK, new Identifier("examplemod:acid_block"), acid);
    
 	}
 }
